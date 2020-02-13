@@ -1,0 +1,31 @@
+/* INJECT CONSTS */
+
+import { makeActionCreator } from '../../util';
+import api from '../api';
+
+export const {{constantCase name}}_REQUEST = "{{constantCase name}}_REQUEST";
+export const {{constantCase name}}_FAILURE = "{{constantCase name}}_FAILURE";
+export const {{constantCase name}}_SUCCESS = "{{constantCase name}}_SUCCESS";
+
+export const {{camelCase name}}Request = makeActionCreator( {{constantCase name}}_REQUEST, "path" )
+export const {{camelCase name}}Failure = makeActionCreator( {{constantCase name}}_FAILURE, "error" )
+export const {{camelCase name}}Success = makeActionCreator( {{constantCase name}}_SUCCESS, "payload" )
+
+export function {{camelCase name}}( )
+{
+return async dispatch => {
+const path = ``;
+
+dispatch( {{camelCase name}}Request( path ) );
+
+try
+{
+const response = await api.get( path );
+dispatch( {{camelCase name}}Success( response.data ) );
+}
+catch( error )
+{
+dispatch( {{camelCase name}}Failure( error ) );
+}
+}
+}

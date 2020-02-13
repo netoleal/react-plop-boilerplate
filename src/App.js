@@ -5,6 +5,7 @@ import storeCreator from './store';
 import './i18n';
 import {
   /* PAGES */
+	Contact,
   HomePage,
 } from './pages';
 
@@ -18,6 +19,9 @@ function App() {
           <HomePage />
         </Route>
         {/* ROUTES */}
+				<Route exact path="/contact">
+					<Contact />
+				</Route>
       </Router>
     </Provider>
   );

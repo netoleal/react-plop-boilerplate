@@ -224,7 +224,7 @@ module.exports = plop => {
     actions: [
       {
         type: 'add',
-        path: 'src/pages/{{lowerCase name}}/{{dotCase name}}.js',
+        path: 'src/pages/{{lowerCase name}}/{{dotCase name}}.page.js',
         templateFile: 'plop-templates/Page/Page.js.hbs',
       },
       {
@@ -260,6 +260,12 @@ module.exports = plop => {
         path: 'src/App.js',
         pattern: `/* PAGES */`,
         template: `\t{{pascalCase name}},`,
+      },
+      {
+        type: 'append',
+        path: 'src/App.js',
+        pattern: `{/* ROUTES */}`,
+        template: `\t\t<Route exact path="/{{dashCase name}}">\n\t\t\t<{{pascalCase name}} />\n\t\t</Route>`,
       },
     ],
   });

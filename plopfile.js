@@ -168,7 +168,7 @@ module.exports = plop => {
         type: 'append',
         path: 'src/components/index.js',
         pattern: `/* PLOP_INJECT_IMPORT */`,
-        template: `import {{pascalCase name}} from './{{lowerCase name}}.component';`,
+        template: `import {{pascalCase name}} from './{{lowerCase name}}';`,
       },
       {
         type: 'append',

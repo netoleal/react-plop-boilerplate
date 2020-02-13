@@ -1,8 +1,9 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
-import /* IMPORT_REDUCERS */
-'../redux/reducers';
+import {
+  /* IMPORT_REDUCERS */
+} from '../redux/reducers';
 
 const combined = combineReducers({
   /* COMBINE_REDUCERS */

@@ -265,7 +265,7 @@ module.exports = plop => {
         type: 'append',
         path: 'src/App.js',
         pattern: `{/* ROUTES */}`,
-        template: `\t\t<Route exact path="/{{dashCase name}}">\n\t\t\t<{{pascalCase name}} />\n\t\t</Route>`,
+        template: `\t\t\t\t<Route exact path="/{{dashCase name}}">\n\t\t\t\t\t<{{pascalCase name}} />\n\t\t\t\t</Route>`,
       },
     ],
   });

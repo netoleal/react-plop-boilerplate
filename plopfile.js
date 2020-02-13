@@ -145,7 +145,7 @@ module.exports = plop => {
     actions: [
       {
         type: 'add',
-        path: 'src/components/{{lowerCase name}}/{{dotCase name}}.js',
+        path: 'src/components/{{lowerCase name}}/{{dotCase name}}.component.js',
         templateFile: 'plop-templates/Component/Component.js.hbs',
       },
       {
@@ -168,7 +168,7 @@ module.exports = plop => {
         type: 'append',
         path: 'src/components/index.js',
         pattern: `/* PLOP_INJECT_IMPORT */`,
-        template: `import {{pascalCase name}} from './{{lowerCase name}}';`,
+        template: `import {{pascalCase name}} from './{{lowerCase name}}.component';`,
       },
       {
         type: 'append',
